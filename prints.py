@@ -1,11 +1,5 @@
 from stats import char_key, num_key
 
-def print_count_message(count, type):
-
-    message = f"{count} {type} found in the document"
-
-    print(message)
-
 def print_char_counts(char_counts_list):
 
     print("--------- Character Count -------")

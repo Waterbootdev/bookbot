@@ -24,3 +24,5 @@ def to_sorted_char_count_list(char_count_dict):
 def filter_printable(char_count_list):
     return list(filter(lambda charcount: charcount[char_key].isalpha() ,char_count_list))        
  
+def get_printable_char_counts(book_text):
+    return filter_printable(to_sorted_char_count_list(get_num_characters(book_text)))
