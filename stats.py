@@ -1,3 +1,7 @@
+
+char_key = "char"
+num_key="num"
+
 def get_num_words(book_text):
 
     words = book_text.split()
@@ -14,3 +18,9 @@ def get_num_characters(book_text):
 
     return dict_num_characters
 
+def to_sorted_char_count_list(char_count_dict):
+    return sorted([{char_key:char, num_key: num} for char, num in char_count_dict.items()],key=lambda charcount: charcount[num_key], reverse=True)
+
+def filter_printable(char_count_list):
+    return list(filter(lambda charcount: charcount[char_key].isalpha() ,char_count_list))        
+ 
